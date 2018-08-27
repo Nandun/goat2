@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>KyzenCS Home</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+	  
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/agency.css" rel="stylesheet">
+<style>
+/**
+Created by Sobola Timilehin David
+*/
+@import url(https://use.fontawesome.com/releases/v5.0.11/css/all.css);
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 85%;
+  width: 100%;
+  height: 100%;
+  background: #eaeaea;
+}
+* {
+  box-sizing: border-box;
+}
+*:focus {
+  outline-width: 0;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+:root {
+  --primary: peru;
+  --dark: #c0c0;
+  --light: #fff;
+  --grad1: rgba(205, 134, 63, 0.767);
+  --grad2: rgba(205, 134, 63, 0.3);
+}
+.login-wrapper {
+    position: absolute;
+  top: 25%;
+  bottom: 25%;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+.login-card {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+    perspective: 1000px;
+    padding: 0;
+}
+.login-card , .login-inner {
+    width: 350px;
+}
+.inner {
+    transition: 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.inner:hover {
+    transform: rotateY(180deg);
+}
+.login-inner{
+    background: #fff;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    backface-visibility: hidden;
+}
+.login-header {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin: 0;
+    align-items: center;
+    color: var(--primary);
+    padding: 10px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+.login-header h2 {
+    font-size: 20px;
+    padding-bottom: 0;
+  margin: 0;
+}
+.login-header h3 {
+    color: #000;
+    font-size: 26px;
+    margin-bottom: 0;
+}
+.login-header p {
+    color: dark-blue;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+.login-card-title {
+    text-align: left;
+    position: relative;
+    color: dark-blue;
+    padding: 5px 10px 0 0;
+    font-size: 26px;
+}
+
+.login-group {
+    display: block;
+    margin: auto;
+    padding: 10px;
+    margin: 0;
+}
+.login-group .login-control {
+    width: 300px;
+    padding: 10px;
+    border: 0;
+    border-bottom: 1px solid var(--primary);
+    transition: all 0.6s ease-in-out;
+}
+input:focus{
+    border: 0;
+    border-bottom: 2px solid var(--primary);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+}
+.login-btn-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.login-btn-group p a{
+    padding: 10px;
+}
+.login-group button {
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+    background: var(--primary);
+    border-radius: .3rem;
+    box-shadow: 0 0 5px var(--grad1);
+    border: 1px solid var(--grad2);
+    color: #fff;
+    transition: all 500ms ease-in-out;
+}
+.login-group button:hover, .login-group button:focus {
+    cursor: pointer;
+    background: var(--primary);
+    border-radius: .3rem;
+    box-shadow: 0 0 5px var(--grad1);
+    border: 1px solid var(--grad2);
+    color: #fff;
+}
+.login-bottom {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
+#login-select {
+    border: none;
+    background: transparent;
+}
+.login-footer span a{
+    color: var(--primary);
+}
+.login-nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+</style>
+</style>
+  </head>
+  <body>
+     <nav class="navbar navbar-expand-lg bg-secondary fixed-top " id="mainNav">
+      <div class="container">
+        <img class="navbar-brand js-scroll-trigger" src="logo.png" alt=""> 
+        <button class="navbar-toggler navbar-toggler-right  bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+             <ul class="navbar-nav  ml-auto">
+               <li class="nav-item">
+<a href="index.html">
+  <button class="button" style="vertical-align:middle">Home</button>
+  </a>      
+      </li>
+            <li class="nav-item">
+            <a href="about.html">
+  <button class="button" style="vertical-align:middle">About</button>
+  </a>
+			</li>
+		<li class="nav-item">
+              	<div class="dropdown">
+  <button class="dropbtn">Products</button>
+  <div class="dropdown-content">
+    <a href="cm.html">Contract Management</a>
+    <a href="em.html">Event Management</a>
+    <a href="mm.html">Marketing Management</a>
+    <a href="vm.html">Vendor Management</a>
+    <a href="hm.html">Hiring Management</a>
+    <a href="pm.html">Project Management</a>
+  </div>
+  </div>
+		      </li>
+<a href="services.html">
+  <button class="button" style="vertical-align:middle">Services</button>
+  </a>		
+		</li>
+            <a href="contact.html">
+  <button class="button" style="vertical-align:middle">Contact</button>
+  </a>
+			<li class="nav-item">
+			<a href="login.html">
+  <button class="button" style="vertical-align:middle">Login</button>
+  </a>
+            </li>           
+        </ul>
+      </div>
+    </div>
+</nav>
+<div class="box">
+<div class="login-wrapper">
+  <!--Front-->
+  <div class="login-card">
+    <div class="login-inner">
+      <div class="login-header">
+        <h2>Login </h2>
+        <h3>Sign In</h3>
+        <div class="login-card-title">
+          <i class="fas fa-ellipsis-h"></i>
+        </div>
+      </div>
+      <!-- <h2 class="login-card-title">Login</h2> -->
+      <div class="login-group">
+        <input type="text" class="login-control" placeholder="username">
+      </div>
+      <div class="login-group">
+        <input type="text" class="login-control" placeholder="password">
+      </div>
+      <div class="login-btn-group">
+        <p>
+          <a href="">Forgotten password?</a>
+        </p>
+        <div class="login-group">
+          <button type="submit" class="_btn">
+            <i class="fas fa-sign-in-alt"></i> Login</button>
+        </div>
+      </div>
+      <div class="login-footer">
+        <p>Don't have account?
+          <span>
+            <a href="">click here..</a>
+          </span>
+        </p>
+
+      </div>
+    </div>
+
+    <div class="login-bottom">
+      <select name="" id="login-select">
+        <option value="">English</option>
+      </select>
+      <ul class="login-nav">
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+
+</div>
+
+  </body>
+
+</html>
